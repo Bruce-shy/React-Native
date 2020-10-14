@@ -16,3 +16,10 @@ React Native 是一个使用React和应用平台的原生功能来构建 Android
 
 React Native 包括一组基本的，随时可用的原生组件，可以使用它们来构建应用程序。这些是 React Native 的核心组件。
 
+### 相关命令
+npx react-native init SampleAppMovies
+使用 nrm 管理 npm 源地址，方便快速切换
+npm install nrm -g --save
+nrm add registry 地址
+nrm del registry 地址 如果无法删除可以直接删除 此电脑->c盘->用户->周子寒-> .nrmrc 文件删除
+nrm ls 查看所有
