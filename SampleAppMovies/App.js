@@ -20,17 +20,17 @@ import {
  * 请求，这个样例数据放在React Native的Github库中。
  * 当然，由于众所周知的原因，这个地址可能国内访问也比较困难。
  */
-const REQUEST_URL =
-  'https://raw.githubusercontent.com/facebook/react-native/0.51-stable/docs/MoviesExample.json';
 
 const App = () => {
   const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState(false)
   useEffect(() => {
-    fetchData();
+    fetchData(); // 页面加载完毕 请求数据
   },[])
 
   const fetchData = () => {
+    const REQUEST_URL =
+    'https://raw.githubusercontent.com/facebook/react-native/0.51-stable/docs/MoviesExample.json';
     fetch(REQUEST_URL)
       .then((response) => response.json())
       .then((responseData) => {
@@ -51,7 +51,7 @@ const App = () => {
   // ];
   // const movie = MOCKED_MOVIES_DATA[0];
   return (
-    loaded ? 
+    loaded ? // 是否成功取到数据(加载完毕)
     (
       <FlatList
         data={data}
@@ -91,6 +91,7 @@ const RenderLoadingView = () => {
   )
 }
 
+// 样式文件放在这里哦
 const styles = StyleSheet.create({
   container: {
     flex: 1,
