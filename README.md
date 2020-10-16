@@ -23,3 +23,7 @@ npm install nrm -g --save
 nrm add registry 地址
 nrm del registry 地址 如果无法删除可以直接删除 此电脑->c盘->用户->周子寒-> .nrmrc 文件删除
 nrm ls 查看所有
+
+### mac 查看端口
+lsof -i tcp:端口号
+杀死端口 kill pid   
